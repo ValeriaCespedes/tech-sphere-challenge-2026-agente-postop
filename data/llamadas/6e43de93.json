@@ -1,0 +1,68 @@
+{
+  "llamada_id": "6e43de93",
+  "inicio": "2026-08-08T18:26:47.601995",
+  "nombre_paciente": "No identificado",
+  "procedimiento": "No especificado",
+  "turnos": [
+    {
+      "transcripcion_paciente": " Tengo dolor en el pecho hace dos días después de la cirugía. ¿Qué debo hacer?",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "Dolor en el pecho después de la cirugía",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿El dolor es constante o intermitente y ha notado algún otro síntoma como dificultad para respirar, fiebre o sudoración?",
+      "fuentes_rag": [
+        {
+          "archivo": "Reemplazo total de cadera Guía para el paciente .pdf",
+          "ruta": "total joint replacement\\Reemplazo total de cadera Guía para el paciente .pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.5640852999640629,
+      "latencia_llm": 0.53440879995469,
+      "latencia_tts": 6.65628870006185,
+      "latencia_total": 8.954357899958268,
+      "tokens": {
+        "input": 1291,
+        "output": 95
+      },
+      "timestamp": "2026-08-08T18:27:21.151403"
+    },
+    {
+      "transcripcion_paciente": " El dolor es constante y sí me cuesta respirar un poco.",
+      "clasificacion": "rojo",
+      "razon_clasificacion": "Dificultad respiratoria y dolor constante",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Lo que me cuenta requiere atención médica inmediata. Voy a escalar esto a nuestro equipo médico ahora mismo y alguien se comunicará con usted a la brevedad. Si los síntomas empeoran, acuda a urgencias de inmediato.",
+      "fuentes_rag": [
+        {
+          "archivo": "PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf",
+          "ruta": "Appendicitis\\PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf"
+        },
+        {
+          "archivo": "002-GUIA-DE-CANCER-DE-CUELLO-UTERINO.pdf",
+          "ruta": "breast_cancer\\002-GUIA-DE-CANCER-DE-CUELLO-UTERINO.pdf"
+        },
+        {
+          "archivo": "Reemplazo total de cadera Guía para el paciente .pdf",
+          "ruta": "total joint replacement\\Reemplazo total de cadera Guía para el paciente .pdf"
+        },
+        {
+          "archivo": "Niveles de dolor, rigidez y funcionalidad en reemplazo primario de rodilla o cadera- en un Hospital de alta complejidad de Manizales (Caldas), 2023.pdf",
+          "ruta": "total joint replacement\\Niveles de dolor, rigidez y funcionalidad en reemplazo primario de rodilla o cadera- en un Hospital de alta complejidad de Manizales (Caldas), 2023.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.7070323000662029,
+      "latencia_llm": 0.9004728000145406,
+      "latencia_tts": 8.600275299977511,
+      "latencia_total": 11.207789900014177,
+      "tokens": {
+        "input": 856,
+        "output": 88
+      },
+      "timestamp": "2026-08-08T18:37:33.545476"
+    }
+  ]
+}

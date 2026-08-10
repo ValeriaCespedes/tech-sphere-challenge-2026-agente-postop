@@ -1,0 +1,59 @@
+{
+  "llamada_id": "e5e57621",
+  "inicio": "2026-08-08T19:16:23.402280",
+  "nombre_paciente": "No identificado",
+  "procedimiento": "No especificado",
+  "turnos": [
+    {
+      "transcripcion_paciente": " Tuve una cirugía láser para extirpar el cáncer de cuello uterino. ¿Cómo debo cuidar mi cirugía?",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "No se reportan síntomas específicos",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿Estás experimentando algún síntoma como dolor, sangrado, fiebre o dificultad para moverte después de la cirugía?",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.6208863999927416,
+      "latencia_llm": 0.808773799915798,
+      "latencia_tts": 4.445587299996987,
+      "latencia_total": 6.428056600037962,
+      "tokens": {
+        "input": 1303,
+        "output": 105
+      },
+      "timestamp": "2026-08-08T19:16:43.917207"
+    },
+    {
+      "transcripcion_paciente": " No, pero quiero saber los cuidados.",
+      "clasificacion": "verde",
+      "razon_clasificacion": "El paciente no reporta síntomas adversos y busca información sobre cuidados postoperatorios",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Entiendo que busca información sobre los cuidados posoperatorios. En el contexto del reemplazo total de cadera, se mencionan cuidados posoperatorios que incluyen recuperación posoperatoria, fisioterapia, dieta y medicamentos, pero no tengo información específica sobre su caso en particular. ¿Le gustaría que escalara su consulta a un profesional médico para obtener orientación personalizada?",
+      "fuentes_rag": [
+        {
+          "archivo": "Reemplazo total de cadera Guía para el paciente .pdf",
+          "ruta": "total joint replacement\\Reemplazo total de cadera Guía para el paciente .pdf"
+        },
+        {
+          "archivo": "GUIA COLECISTITIS AGUDA.pdf",
+          "ruta": "cholecystitis\\GUIA COLECISTITIS AGUDA.pdf"
+        },
+        {
+          "archivo": "GUÍA DE MANEJO PARA EL DIAGNÓSTICO, TRATAMIENTO, SEGUIMIENTO Y PALIACIÓN DEL CÁNCER DE COLON Y RECTO.pdf",
+          "ruta": "colorectal cancer\\GUÍA DE MANEJO PARA EL DIAGNÓSTICO, TRATAMIENTO, SEGUIMIENTO Y PALIACIÓN DEL CÁNCER DE COLON Y RECTO.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.3758545001037419,
+      "latencia_llm": 0.6097539999755099,
+      "latencia_tts": 15.115813300013542,
+      "latencia_total": 16.479826500057243,
+      "tokens": {
+        "input": 993,
+        "output": 87
+      },
+      "timestamp": "2026-08-08T19:17:17.294020"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "llamada_id": "61427708",
+  "inicio": "2026-08-08T16:45:53.355267",
+  "turnos": [
+    {
+      "transcripcion_paciente": " Tengo dolor en el pecho después de la operación. ¿Qué debo hacer?",
+      "clasificacion": "rojo",
+      "razon_clasificacion": "Dolor torácico postoperatorio",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Lo que me cuenta requiere atención médica inmediata. Voy a escalar esto a nuestro equipo médico ahora mismo y alguien se comunicará con usted a la brevedad. Si los síntomas empeoran, acuda a urgencias de inmediato.",
+      "fuentes_rag": [
+        {
+          "archivo": "Reemplazo total de cadera Guía para el paciente .pdf",
+          "ruta": "total joint replacement\\Reemplazo total de cadera Guía para el paciente .pdf"
+        },
+        {
+          "archivo": "PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf",
+          "ruta": "Appendicitis\\PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf"
+        },
+        {
+          "archivo": "Reemplazo total de Cadera Guía para pacientes y cuidadores El camino hacia su recuperación.pdf",
+          "ruta": "total joint replacement\\Reemplazo total de Cadera Guía para pacientes y cuidadores El camino hacia su recuperación.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 1.7579597999574617,
+      "latencia_llm": 0.6902560000307858,
+      "latencia_tts": 7.968196799978614,
+      "latencia_total": 11.03565149998758,
+      "tokens": {
+        "input": 1329,
+        "output": 94
+      },
+      "timestamp": "2026-08-08T16:46:17.473302"
+    }
+  ]
+}

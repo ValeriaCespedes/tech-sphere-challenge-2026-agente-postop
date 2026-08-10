@@ -1,0 +1,27 @@
+{
+  "llamada_id": "2b683230",
+  "inicio": "2026-08-09T10:45:06.304891",
+  "nombre_paciente": "Jean León Sepúlveda",
+  "procedimiento": "Colecistectomía",
+  "turnos": [
+    {
+      "transcripcion_paciente": " tengo dolor en el estómago y dificultad respiratoria",
+      "clasificacion": "rojo",
+      "razon_clasificacion": "Dificultad respiratoria y dolor en el estómago pueden ser síntomas de complicaciones graves",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Lo que me cuenta requiere atención médica inmediata. Voy a escalar esto a nuestro equipo médico ahora mismo y alguien se comunicará con usted a la brevedad. Si los síntomas empeoran, acuda a urgencias de inmediato.",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 1.4663448999635875,
+      "latencia_llm": 0.5686725000850856,
+      "latencia_tts": 8.525104900007136,
+      "latencia_total": 11.919857100001536,
+      "tokens": {
+        "input": 1389,
+        "output": 83
+      },
+      "timestamp": "2026-08-09T10:45:45.234359"
+    }
+  ]
+}

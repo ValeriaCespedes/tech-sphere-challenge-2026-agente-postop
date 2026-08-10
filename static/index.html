@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Llamada de seguimiento postoperatorio</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 60px auto; text-align: center; }
+        #estado { margin: 20px 0; font-size: 1.1em; color: #555; }
+        button {
+            padding: 16px 32px; font-size: 1.1em; border-radius: 8px;
+            border: none; cursor: pointer; margin: 8px;
+        }
+        #btnHablar { background: #2563eb; color: white; }
+        #btnHablar:disabled { background: #ccc; cursor: not-allowed; }
+        #btnFinalizar { background: #dc2626; color: white; }
+        #transcripcion, #respuesta { text-align: left; margin-top: 20px; padding: 12px; background: #f5f5f5; border-radius: 8px; }
+        #resumen { text-align: left; margin-top: 20px; padding: 12px; background: #fff3cd; border-radius: 8px; display: none; }
+    </style>
+</head>
+<body>
+    <h2>📞 Llamada de seguimiento</h2>
+    <div style="margin-bottom: 16px;">
+        <label for="selectorPaciente"><b>Paciente:</b></label><br>
+        <select id="selectorPaciente" style="padding: 8px; font-size: 1em; margin-top: 6px;">
+            <option value="0">Mauricio Juan González Sánchez — Apendicectomía (34F)</option>
+            <option value="1">Jean León Sepúlveda — Colecistectomía (30F, hipertensión)</option>
+            <option value="2">María Adriana Montoya — Colectomía (52F)</option>
+        </select>
+    </div>
+    
+    <div id="estado">Presiona el botón y habla</div>
+    <button id="btnHablar">🎤 Hablar</button>
+    <button id="btnFinalizar">📋 Finalizar y ver resumen</button>
+    <audio id="audioRespuesta" controls style="display:none; margin-top:20px; width:100%;"></audio>
+    <div id="transcripcion"></div>
+    <div id="respuesta"></div>
+    <div id="resumen"></div>
+
+    <script>
+        const btnHablar = document.getElementById('btnHablar');
+        const btnFinalizar = document.getElementById('btnFinalizar');
+        const estado = document.getElementById('estado');
+        const audioRespuesta = document.getElementById('audioRespuesta');
+        const divTranscripcion = document.getElementById('transcripcion');
+        const divRespuesta = document.getElementById('respuesta');
+        const divResumen = document.getElementById('resumen');
+
+        let mediaRecorder;
+        let chunks = [];
+        let grabando = false;
+        let llamadaId = null;
+
+        const PACIENTES = [
+            { nombre: "Mauricio Juan González Sánchez", procedimiento: "Apendicectomía" },
+            { nombre: "Jean León Sepúlveda", procedimiento: "Colecistectomía" },
+            { nombre: "María Adriana Montoya", procedimiento: "Colectomía" },
+        ];
+        
+        async function iniciarLlamada() {
+            const idx = parseInt(document.getElementById('selectorPaciente').value);
+            const paciente = PACIENTES[idx];
+        
+            const resp = await fetch('http://localhost:8000/llamada/iniciar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    nombre_paciente: paciente.nombre,
+                    procedimiento: paciente.procedimiento,
+                }),
+            });
+            const datos = await resp.json();
+            llamadaId = datos.llamada_id;
+            console.log('Llamada iniciada:', llamadaId, 'para', paciente.nombre);
+        }
+        iniciarLlamada();
+        
+        // Si cambian el paciente seleccionado, reinicia la llamada con los datos correctos
+        document.getElementById('selectorPaciente').addEventListener('change', iniciarLlamada);
+
+        btnHablar.addEventListener('click', async () => {
+            if (!grabando) {
+                // Empezar a grabar
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                chunks = [];
+
+                mediaRecorder.ondataavailable = (e) => chunks.push(e.data);
+                mediaRecorder.onstop = enviarAudio;
+
+                mediaRecorder.start();
+                grabando = true;
+                btnHablar.textContent = '⏹️ Detener';
+                estado.textContent = 'Grabando... habla ahora';
+            } else {
+                // Detener grabación
+                mediaRecorder.stop();
+                mediaRecorder.stream.getTracks().forEach(track => track.stop());
+                grabando = false;
+                btnHablar.textContent = '🎤 Hablar';
+                btnHablar.disabled = true;
+                estado.textContent = 'Procesando...';
+            }
+        });
+
+        async function enviarAudio() {
+            const blob = new Blob(chunks, { type: 'audio/webm' });
+            const formData = new FormData();
+            formData.append('audio', blob, 'turno.webm');
+            formData.append('llamada_id', llamadaId);
+
+            try {
+                const respuesta = await fetch('http://localhost:8000/turno', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const transcripcion = decodeURIComponent(respuesta.headers.get('X-Transcripcion') || '');
+                const textoRespuesta = decodeURIComponent(respuesta.headers.get('X-Respuesta-Texto') || '');
+
+                divTranscripcion.textContent = '🗣️ Tú dijiste: ' + transcripcion;
+                divRespuesta.textContent = '🤖 Agente: ' + textoRespuesta;
+
+                const audioBlob = await respuesta.blob();
+                audioRespuesta.src = URL.createObjectURL(audioBlob);
+                audioRespuesta.style.display = 'block';
+                audioRespuesta.play().catch(err => {
+                    console.log('Autoplay bloqueado, el usuario debe darle play manualmente:', err);
+                });
+
+                estado.textContent = 'Presiona el botón y habla';
+            } catch (error) {
+                estado.textContent = 'Error: ' + error.message;
+                console.error(error);
+            } finally {
+                btnHablar.disabled = false;
+            }
+        }
+
+        btnFinalizar.addEventListener('click', async () => {
+            const resp = await fetch(`http://localhost:8000/llamada/${llamadaId}/resumen`);
+            const resumen = await resp.json();
+
+            divResumen.style.display = 'block';
+            divResumen.innerHTML = `
+                <strong>📋 Resumen de la llamada</strong><br>
+                <b>Paciente:</b> ${resumen.nombre_paciente}<br>
+                <b>Procedimiento:</b> ${resumen.procedimiento}<br>
+                <b>Clasificación final:</b> ${resumen.clasificacion_final.toUpperCase()}<br>
+                <b>Síntomas reportados:</b> ${resumen.sintomas_reportados.join(' | ') || 'Ninguno'}<br>
+                <b>Referencias usadas:</b> ${resumen.referencias_usadas.map(r => r.archivo).join(', ') || 'Ninguna'}<br>
+                <b>Próximos pasos:</b> ${resumen.proximos_pasos}
+            `;
+        });
+    </script>
+</body>
+</html>

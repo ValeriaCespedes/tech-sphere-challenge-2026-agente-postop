@@ -1,0 +1,114 @@
+{
+  "llamada_id": "bef5fd0c",
+  "inicio": "2026-08-08T16:39:47.938048",
+  "turnos": [
+    {
+      "transcripcion_paciente": " Gracias.",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "No se proporcionó información suficiente",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿Cuál es su estado actual después de la operación? ¿Presenta algún síntoma o dolor?",
+      "fuentes_rag": [
+        {
+          "archivo": "PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf",
+          "ruta": "Appendicitis\\PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf"
+        },
+        {
+          "archivo": "FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf",
+          "ruta": "Appendicitis\\FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf"
+        },
+        {
+          "archivo": "002-GUIA-DE-CANCER-DE-CUELLO-UTERINO.pdf",
+          "ruta": "breast_cancer\\002-GUIA-DE-CANCER-DE-CUELLO-UTERINO.pdf"
+        },
+        {
+          "archivo": "Protocolo de recuperación mejorada después de cirugía (ERAS) atenúa el estrés y acelera la recuperación en pacientes después de resección radical por cáncer colorrectal- Experiencia en la Clínica Universitaria Colombia.pdf",
+          "ruta": "colorectal cancer\\Protocolo de recuperación mejorada después de cirugía (ERAS) atenúa el estrés y acelera la recuperación en pacientes después de resección radical por cáncer colorrectal- Experiencia en la Clínica Universitaria Colombia.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 1.054786799941212,
+      "latencia_llm": 0.5614612000063062,
+      "latencia_tts": 7.102872100076638,
+      "latencia_total": 10.48942330002319,
+      "tokens": {
+        "input": 575,
+        "output": 77
+      },
+      "timestamp": "2026-08-08T16:40:07.603783"
+    },
+    {
+      "transcripcion_paciente": " Gracias.",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "No se proporcionó información suficiente",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿Cuál es su estado actual después de la operación? ¿Presenta algún síntoma o dolor?",
+      "fuentes_rag": [
+        {
+          "archivo": "PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf",
+          "ruta": "Appendicitis\\PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf"
+        },
+        {
+          "archivo": "FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf",
+          "ruta": "Appendicitis\\FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf"
+        },
+        {
+          "archivo": "002-GUIA-DE-CANCER-DE-CUELLO-UTERINO.pdf",
+          "ruta": "breast_cancer\\002-GUIA-DE-CANCER-DE-CUELLO-UTERINO.pdf"
+        },
+        {
+          "archivo": "Protocolo de recuperación mejorada después de cirugía (ERAS) atenúa el estrés y acelera la recuperación en pacientes después de resección radical por cáncer colorrectal- Experiencia en la Clínica Universitaria Colombia.pdf",
+          "ruta": "colorectal cancer\\Protocolo de recuperación mejorada después de cirugía (ERAS) atenúa el estrés y acelera la recuperación en pacientes después de resección radical por cáncer colorrectal- Experiencia en la Clínica Universitaria Colombia.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.42945180006790906,
+      "latencia_llm": 0.5653023000340909,
+      "latencia_tts": 4.350234899902716,
+      "latencia_total": 6.153945600031875,
+      "tokens": {
+        "input": 575,
+        "output": 93
+      },
+      "timestamp": "2026-08-08T16:44:58.822588"
+    },
+    {
+      "transcripcion_paciente": " Gracias.",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "No se proporcionó información suficiente",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿Cuál es su estado actual después de la operación? ¿Presenta algún síntoma o dolor?",
+      "fuentes_rag": [
+        {
+          "archivo": "PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf",
+          "ruta": "Appendicitis\\PLAN DE CUIDADO EN CASA DE PACIENTE EN POSTOPERATORIO DE APENDICECTOMÍA.pdf"
+        },
+        {
+          "archivo": "FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf",
+          "ruta": "Appendicitis\\FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf"
+        },
+        {
+          "archivo": "002-GUIA-DE-CANCER-DE-CUELLO-UTERINO.pdf",
+          "ruta": "breast_cancer\\002-GUIA-DE-CANCER-DE-CUELLO-UTERINO.pdf"
+        },
+        {
+          "archivo": "Protocolo de recuperación mejorada después de cirugía (ERAS) atenúa el estrés y acelera la recuperación en pacientes después de resección radical por cáncer colorrectal- Experiencia en la Clínica Universitaria Colombia.pdf",
+          "ruta": "colorectal cancer\\Protocolo de recuperación mejorada después de cirugía (ERAS) atenúa el estrés y acelera la recuperación en pacientes después de resección radical por cáncer colorrectal- Experiencia en la Clínica Universitaria Colombia.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.38585199997760355,
+      "latencia_llm": 0.5743510000174865,
+      "latencia_tts": 3.399194100056775,
+      "latencia_total": 4.919843100011349,
+      "tokens": {
+        "input": 575,
+        "output": 81
+      },
+      "timestamp": "2026-08-08T16:45:29.949509"
+    }
+  ]
+}

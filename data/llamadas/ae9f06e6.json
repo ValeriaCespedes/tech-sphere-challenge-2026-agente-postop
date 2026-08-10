@@ -1,0 +1,27 @@
+{
+  "llamada_id": "ae9f06e6",
+  "inicio": "2026-08-08T19:09:44.421261",
+  "nombre_paciente": "No identificado",
+  "procedimiento": "No especificado",
+  "turnos": [
+    {
+      "transcripcion_paciente": " Tengo dificultad respiratoria y dolor en el pecho después de la cirugía.",
+      "clasificacion": "rojo",
+      "razon_clasificacion": "Dificultad respiratoria y dolor en el pecho",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Lo que me cuenta requiere atención médica inmediata. Voy a escalar esto a nuestro equipo médico ahora mismo y alguien se comunicará con usted a la brevedad. Si los síntomas empeoran, acuda a urgencias de inmediato.",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 2.1600999999791384,
+      "latencia_llm": 0.7791526999790221,
+      "latencia_tts": 8.69804699998349,
+      "latencia_total": 13.128752200049348,
+      "tokens": {
+        "input": 1165,
+        "output": 95
+      },
+      "timestamp": "2026-08-08T19:10:44.249782"
+    }
+  ]
+}

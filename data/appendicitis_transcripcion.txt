@@ -1,0 +1,43 @@
+REVISIÓN DE LA LITERATURA SOBRE LA APENDICITIS AGUDA PEDIÁTRICA NO ESPECIFICADA EN EL PERIODO 2000-2021
+Nicole Yulieth Álvarez Moreno, Emiro Gabriel Barriga Roa — Universidad de Santander
+
+INTRODUCCIÓN
+La causa más frecuente de abdomen agudo e indicación quirúrgica en la población pediátrica del mundo es la apendicitis, patología descrita como un proceso inflamatorio agudo originado por la obstrucción de la luz apendicular principalmente causado por un taponamiento de materia fecal denominado "fecalito", el cual inflama el apéndice y puede producir congestión vascular necrosado. La clínica más frecuente corresponde al dolor abdominal principalmente a nivel del epigastrio y periumbilical que se desplazan alrededor de 4 a 6 horas a la fosa iliaca derecha, donde el signo clásico es dolor en el punto de McBurney y Blumberg positivo, asociado a náuseas, vómito, constipación o diarrea y fiebre. Si existe dificultad para identificar la patología se utiliza ayudas como pruebas de laboratorio o ultrasonido abdominal. El tratamiento de elección actual para la apendicitis aguda es quirúrgico, pero varían sus modalidades, el más utilizado corresponde a la apendectomía laparoscópica.
+
+OBJETIVOS
+General: Determinar la situación de la apendicitis aguda pediátrica no especificada en Colombia.
+Específicos:
+- Establecer la incidencia de la apendicitis aguda pediátrica no especificada.
+- Analizar los factores de riesgo que contribuyen al desarrollo de la apendicitis aguda pediátrica no especificada en Colombia.
+- Comparar los abordajes terapéuticos de la apendicitis aguda pediátrica no especificada.
+
+METODOLOGÍA
+El siguiente proyecto de investigación se hará en forma de revisión sistemática a manera de revisión documental relacionados a la apendicitis pediátrica no especificada, se incluyeron artículos de revisión, metaanálisis, reseñas y guías clínicas.
+Paradigma de investigación: explicativo y descriptivo.
+Enfoque de investigación: Analítico interpretativo.
+Tipo de investigación según tipo: No experimental.
+Tipo de investigación según el nivel o profundidad: Descriptiva cuantitativa.
+Direccionalidad: Transversal.
+Tipo de investigación según la cronología de los hechos o temporalidad: Investigación retrospectivo.
+Tipo de investigación según su propósito: Investigación aplicada.
+
+RESULTADOS
+
+Objetivo 1. Incidencia por grupo etáreo para apendicitis en algún momento de su vida:
+Se logra evidenciar que los grupos etarios con mayor incidencia (hasta un 35%) para padecer apendicitis en algún momento de su vida son los escolares y adolescentes, evidenciando esto en tres de los artículos analizados. Grupos etarios analizados: recién nacido (0-28 días), lactante menor (29-365 días), lactante mayor (1-2 años), preescolar (3-5 años), escolar (6-12 años), adolescente (13-18 años).
+
+Objetivo 2. Factores de riesgo para apendicitis:
+Los factores que guardan mayor relevancia en la aparición de la apendicitis aguda pediátrica son edad (29%) y género (29%); le continúan que tengan antecedentes familiares de primer grado (20%) y que sufra obesidad (14%), en menor frecuencia influyen embarazo, inmunodepresión y la posición anatómica (>5% cada uno).
+
+Objetivo 3. Abordaje terapéutico para apendicitis:
+Con respecto al abordaje terapéutico, el usado con mayor frecuencia es el laparoscópico, abarcando el 72%, y un 28% la forma convencional.
+
+CONCLUSIONES
+- La incidencia anual de la apendicitis aguda pediátrica no especificada por cada 100.000 habitantes oscila entre 50 y 200 casos, reflejando la gran frecuencia de esta patología abdominal aguda en edades pediátricas; así mismo, el género con mayor número de casos es el masculino, destacando que los grupos etarios más afectados son el escolar y el adolescente.
+- La apendicitis aguda al ser un proceso de etiología variada presenta diferentes factores de riesgo que predisponen a su desarrollo, entre los cuales se encuentra la edad como el principal, seguido del género, antecedentes familiares y obesidad.
+- El abordaje terapéutico más usado es el laparoscópico debido a que con esta técnica se disminuye el tiempo de la cirugía, existe menor invasión a la cavidad abdominal y existen menores complicaciones postoperatorias, aunque para su realización se necesita una amplia destreza.
+- La apendicitis es una enfermedad que no es prevenible, por lo tanto, el manejo adecuado inicia desde el diagnóstico oportuno para evitar complicaciones y aumento de la tasa de estancia hospitalaria y un tratamiento eficaz para su resolución.
+
+BIBLIOGRAFÍA
+1. Hernández J, Martínez M, Palomeque A. Apendicitis aguda: revisión de la literatura [Internet]. 7th ed. División de Cirugía, Hospital General "Dr. Aurelio Valdivieso", Oaxaca, México; 2019 [citado 15 abril 2020]. Disponible en: https://www.medigraphic.com/pdfs/cirgen/cg-2019/cg191f.pdf
+2. Jameson JL, Fauci AS, Kasper DL, Hauser SL, Longo DL, Loscalzo J. Harrison. Principios de Medicina Interna. 20e. [citado 15 abril 2020]. Disponible en: https://accessmedicina.mhmedical.com/book.aspx?bookID=2461
