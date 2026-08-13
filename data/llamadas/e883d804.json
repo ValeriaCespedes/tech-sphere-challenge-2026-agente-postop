@@ -1,0 +1,44 @@
+{
+  "llamada_id": "e883d804",
+  "inicio": "2026-08-12T21:41:02.238143",
+  "nombre_paciente": "Mauricio Juan González Sánchez",
+  "procedimiento": "Apendicectomía",
+  "turnos": [
+    {
+      "transcripcion_paciente": " Es análisis por voltaje de nodos.",
+      "clasificacion": "verde",
+      "razon_clasificacion": "Parece ser una pregunta informativa sobre un procedimiento médico",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Lo siento, pero no tengo información específica en el contexto clínico proporcionado sobre análisis por voltaje de nodos. No puedo proporcionar una respuesta directa a su pregunta. ¿Le gustaría que escalara su consulta a un profesional médico para obtener una respuesta más precisa?",
+      "fuentes_rag": [
+        {
+          "archivo": "FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf",
+          "ruta": "Appendicitis\\FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf"
+        },
+        {
+          "archivo": "Identificación de microorganismos intrabdominales asociados a colección intrabdominal postoperatoria en niños con apendicitis perforada.pdf",
+          "ruta": "Appendicitis\\Identificación de microorganismos intrabdominales asociados a colección intrabdominal postoperatoria en niños con apendicitis perforada.pdf"
+        },
+        {
+          "archivo": "Establishing the need for clinical follow-up after emergency appendicectomy in the modern era_ Retrospective case series of 145 patients.pdf",
+          "ruta": "Appendicitis\\Establishing the need for clinical follow-up after emergency appendicectomy in the modern era_ Retrospective case series of 145 patients.pdf"
+        },
+        {
+          "archivo": "diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf",
+          "ruta": "Appendicitis\\diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.736298000003444,
+      "latencia_llm": 0.4122980000101961,
+      "latencia_tts": 11.848295400006464,
+      "latencia_total": 14.421733700000914,
+      "tokens": {
+        "input": 762,
+        "output": 62
+      },
+      "timestamp": "2026-08-12T21:41:26.702307"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "llamada_id": "4b510128",
+  "inicio": "2026-08-12T20:39:14.476666",
+  "nombre_paciente": "Mauricio Juan González Sánchez",
+  "procedimiento": "Apendicectomía",
+  "turnos": [
+    {
+      "transcripcion_paciente": " Llevo dos días con fiebre baja como 37.8",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "Fiebre baja",
+      "fuente_decision": "llm+reglas",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Entiendo que estás experimentando fiebre baja, de 37.8 grados, desde hace dos días. Según el contexto clínico, la fiebre es uno de los síntomas que se deben monitorear después de una apendicitis, especialmente si supera los 38 grados. Te recomiendo consultar con tu médico para evaluar si es necesario tomar alguna medida adicional. Voy a dejar registrado su reporte para que el equipo médico le dé seguimiento.",
+      "fuentes_rag": [
+        {
+          "archivo": "Identificación de microorganismos intrabdominales asociados a colección intrabdominal postoperatoria en niños con apendicitis perforada.pdf",
+          "ruta": "Appendicitis\\Identificación de microorganismos intrabdominales asociados a colección intrabdominal postoperatoria en niños con apendicitis perforada.pdf"
+        },
+        {
+          "archivo": "diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf",
+          "ruta": "Appendicitis\\diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf"
+        },
+        {
+          "archivo": "FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf",
+          "ruta": "Appendicitis\\FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.5299223999900278,
+      "latencia_llm": 0.6575451999960933,
+      "latencia_tts": 21.2585522000154,
+      "latencia_total": 22.800038299988955,
+      "tokens": {
+        "input": 1880,
+        "output": 87
+      },
+      "timestamp": "2026-08-12T20:39:48.552556"
+    }
+  ]
+}

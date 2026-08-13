@@ -1,0 +1,40 @@
+{
+  "llamada_id": "5804058e",
+  "inicio": "2026-08-12T21:02:41.289368",
+  "nombre_paciente": "Mauricio Juan González Sánchez",
+  "procedimiento": "Apendicectomía",
+  "turnos": [
+    {
+      "transcripcion_paciente": " que es análisis por voltaje de nodos",
+      "clasificacion": "verde",
+      "razon_clasificacion": "Pregunta informativa sobre un tema específico, no reporte de síntomas",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Lo siento, pero no hay información en el contexto clínico proporcionado que se refiera a \"análisis por voltaje de nodos\". Si necesita más información sobre su tratamiento o seguimiento, puedo ofrecerle escalar su consulta a personal médico para obtener una respuesta más precisa. ¿Desea que lo derive a un especialista?",
+      "fuentes_rag": [
+        {
+          "archivo": "Identificación de microorganismos intrabdominales asociados a colección intrabdominal postoperatoria en niños con apendicitis perforada.pdf",
+          "ruta": "Appendicitis\\Identificación de microorganismos intrabdominales asociados a colección intrabdominal postoperatoria en niños con apendicitis perforada.pdf"
+        },
+        {
+          "archivo": "diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf",
+          "ruta": "Appendicitis\\diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf"
+        },
+        {
+          "archivo": "FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf",
+          "ruta": "Appendicitis\\FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.6811932999989949,
+      "latencia_llm": 0.6124024000018835,
+      "latencia_tts": 12.990706200012937,
+      "latencia_total": 15.818841899977997,
+      "tokens": {
+        "input": 1440,
+        "output": 75
+      },
+      "timestamp": "2026-08-12T21:03:16.325165"
+    }
+  ]
+}

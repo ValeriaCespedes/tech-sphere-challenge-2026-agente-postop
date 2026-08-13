@@ -1,0 +1,32 @@
+{
+  "llamada_id": "d5ca2e1a",
+  "inicio": "2026-08-12T21:41:45.963256",
+  "nombre_paciente": "María Adriana Montoya",
+  "procedimiento": "Colectomía",
+  "turnos": [
+    {
+      "transcripcion_paciente": " ¿Qué es análisis por voltaje de nodo?",
+      "clasificacion": "verde",
+      "razon_clasificacion": "Pregunta informativa sobre un tema médico específico, no reporta síntomas",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Lo siento, pero no hay información disponible en el contexto clínico proporcionado sobre \"análisis por voltaje de nodo\". Si necesita más información o aclaraciones sobre su diagnóstico o tratamiento, le recomiendo que hable con su médico para obtener una respuesta más precisa y personalizada. ¿Desea que lo derive con un especialista para obtener más información?",
+      "fuentes_rag": [
+        {
+          "archivo": "GUÍA DE MANEJO PARA EL DIAGNÓSTICO, TRATAMIENTO, SEGUIMIENTO Y PALIACIÓN DEL CÁNCER DE COLON Y RECTO.pdf",
+          "ruta": "colorectal cancer\\GUÍA DE MANEJO PARA EL DIAGNÓSTICO, TRATAMIENTO, SEGUIMIENTO Y PALIACIÓN DEL CÁNCER DE COLON Y RECTO.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.44139330001780763,
+      "latencia_llm": 0.5894416999944951,
+      "latencia_tts": 16.545131499995477,
+      "latencia_total": 18.45890940001118,
+      "tokens": {
+        "input": 1466,
+        "output": 81
+      },
+      "timestamp": "2026-08-12T21:42:12.957325"
+    }
+  ]
+}

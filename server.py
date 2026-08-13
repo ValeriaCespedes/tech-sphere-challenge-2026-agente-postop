@@ -24,6 +24,17 @@ from src.decision import clasificar_turno
 from src.registro_llamada import nueva_llamada, agregar_turno
 from src.resumen import generar_resumen
 
+from src.registro_llamada import nueva_llamada, agregar_turno, obtener_historial_conversacional, obtener_llamada
+
+MAPA_PROCEDIMIENTO_ESCENARIO = {
+    "Apendicectomía": "Appendicitis",
+    "Colecistectomía": "cholecystitis",
+    "Colectomía": "colorectal cancer",
+    "Reemplazo de cadera/rodilla": "total joint replacement",
+    "Mastectomía": "breast_cancer",
+}
+
+
 app = FastAPI(title="Agente de seguimiento postoperatorio")
 
 app.add_middleware(
@@ -61,11 +72,20 @@ async def procesar_turno(audio: UploadFile = File(...), llamada_id: str = Form(.
     resultado_stt = transcribe_audio(ruta_temporal)
     ruta_temporal.unlink(missing_ok=True)
 
-    # 2. Clasificación de triaje
-    decision = clasificar_turno(resultado_stt.text)
+        # 1.5. Recupera historial de turnos previos en esta llamada
+    historial = obtener_historial_conversacional(llamada_id)
 
-    # 3. RAG + LLM para la respuesta conversacional
-    resultado_texto = responder_con_contexto(resultado_stt.text)
+    # Determina el escenario clínico del paciente actual, para priorizar
+# la búsqueda del RAG dentro de su procedimiento específico
+    registro_actual = obtener_llamada(llamada_id)
+    procedimiento_paciente = registro_actual.get("procedimiento", "")
+    escenario_paciente = MAPA_PROCEDIMIENTO_ESCENARIO.get(procedimiento_paciente)
+
+    # 2. Clasificación de triaje (con contexto conversacional)
+    decision = clasificar_turno(resultado_stt.text, historial=historial)
+
+    # 3. RAG + LLM para la respuesta conversacional (con contexto conversacional)
+    resultado_texto = responder_con_contexto(resultado_stt.text, historial=historial, escenario=escenario_paciente)
 
     # 4. Construye la respuesta final, incorporando la decisión de triaje
     respuesta_final = resultado_texto["respuesta"]
@@ -93,7 +113,10 @@ async def procesar_turno(audio: UploadFile = File(...), llamada_id: str = Form(.
     # Las fuentes solo cuentan como "usadas" si la respuesta final realmente
 # fue la generada por el RAG. Si se sobrescribió con un mensaje de triaje
 # genérico (rojo/amarillo), esas fuentes no fundamentan lo que se dijo.
-    respuesta_fue_del_rag = (respuesta_final == resultado_texto["respuesta"])
+    respuesta_fue_del_rag = (
+    decision.clasificacion == "verde"
+    or (decision.clasificacion == "amarillo" and not decision.requiere_mas_info)
+    )
 
     agregar_turno(llamada_id, {
         "transcripcion_paciente": resultado_stt.text,

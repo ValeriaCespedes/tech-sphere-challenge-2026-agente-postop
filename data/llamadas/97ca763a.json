@@ -1,0 +1,32 @@
+{
+  "llamada_id": "97ca763a",
+  "inicio": "2026-08-12T21:29:58.619400",
+  "nombre_paciente": "María Adriana Montoya",
+  "procedimiento": "Colectomía",
+  "turnos": [
+    {
+      "transcripcion_paciente": " ¿Qué es análisis por voltaje de nodos?",
+      "clasificacion": "verde",
+      "razon_clasificacion": "Pregunta informativa sobre un tema específico",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "El análisis por voltaje de nodos es un método utilizado para determinar las tensiones en los nodos de un circuito eléctrico, tomando como referencia un nodo común, y se basa en la aplicación de la Ley de Corrientes de Kirchhoff y la Ley de Ohm. Este método permite relacionar voltajes, corrientes y resistencias de manera eficiente. Si necesitas más información específica, te recomiendo que consultes con un profesional en ingeniería eléctrica.",
+      "fuentes_rag": [
+        {
+          "archivo": "Informe 2 laboratorio Circuitos.pdf",
+          "ruta": "consola_admin/Informe 2 laboratorio Circuitos.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 1.0615390999882948,
+      "latencia_llm": 0.7506561000191141,
+      "latencia_tts": 18.78980520000914,
+      "latencia_total": 22.181849599990528,
+      "tokens": {
+        "input": 1336,
+        "output": 110
+      },
+      "timestamp": "2026-08-12T21:30:29.450589"
+    }
+  ]
+}

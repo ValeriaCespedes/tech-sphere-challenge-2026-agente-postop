@@ -1,0 +1,74 @@
+{
+  "llamada_id": "a1761026",
+  "inicio": "2026-08-12T19:20:53.751686",
+  "nombre_paciente": "Mauricio Juan González Sánchez",
+  "procedimiento": "Apendicectomía",
+  "turnos": [
+    {
+      "transcripcion_paciente": " Me duele la herida.",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "Dolor en la herida puede ser un síntoma de infección o complicación",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿El dolor es leve, moderado o severo y ha empeorado con el tiempo?",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.7650653999880888,
+      "latencia_llm": 0.674057600001106,
+      "latencia_tts": 3.424829800002044,
+      "latencia_total": 6.4363771000062115,
+      "tokens": {
+        "input": 783,
+        "output": 84
+      },
+      "timestamp": "2026-08-12T19:21:10.578344"
+    },
+    {
+      "transcripcion_paciente": " El dolor moderado.",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "El paciente reporta dolor moderado",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿El dolor ha empeorado con el tiempo o se mantiene constante?",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.44283179999911226,
+      "latencia_llm": 0.7303268999967258,
+      "latencia_tts": 2.581669100007275,
+      "latencia_total": 4.222395899996627,
+      "tokens": {
+        "input": 1544,
+        "output": 86
+      },
+      "timestamp": "2026-08-12T19:21:24.629991"
+    },
+    {
+      "transcripcion_paciente": " se mantiene constante.",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "dolor moderado constante en la herida",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Entiendo que el dolor en la herida se mantiene constante y es moderado. Sin embargo, no tengo información específica en el contexto clínico proporcionado sobre el manejo del dolor en la herida en este estadio. Te recomiendo que hablemos con un médico para que pueda evaluar y brindarte la atención adecuada. Voy a dejar registrado su reporte para que el equipo médico le dé seguimiento.",
+      "fuentes_rag": [
+        {
+          "archivo": "cervix16nov-full.pdf",
+          "ruta": "breast_cancer\\cervix16nov-full.pdf"
+        },
+        {
+          "archivo": "FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf",
+          "ruta": "Appendicitis\\FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.39839000001666136,
+      "latencia_llm": 0.6532406999904197,
+      "latencia_tts": 15.099909999989904,
+      "latencia_total": 16.586776399984956,
+      "tokens": {
+        "input": 1674,
+        "output": 77
+      },
+      "timestamp": "2026-08-12T19:21:54.220982"
+    }
+  ]
+}

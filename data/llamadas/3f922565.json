@@ -1,0 +1,36 @@
+{
+  "llamada_id": "3f922565",
+  "inicio": "2026-08-12T20:48:21.053800",
+  "nombre_paciente": "Jennifer Camila Arias",
+  "procedimiento": "Reemplazo de cadera/rodilla",
+  "turnos": [
+    {
+      "transcripcion_paciente": " ¿En cuánto tiempo puedo empezar a caminar sin el andador?",
+      "clasificacion": "verde",
+      "razon_clasificacion": "Pregunta informativa sobre cuidados postoperatorios",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Según su plan de fisioterapia, usted comenzará a caminar inmediatamente después de la cirugía y deberá pensar que usará un andador o bastón durante las primeras 2 a 4 semanas. El tiempo que deberá usar el andador o las muletas es variable y puede ir de varios días a varias semanas. Es importante consultar a su cirujano o fisioterapeuta después de la operación para determinar el mejor momento para dejar de usar los dispositivos de asistencia.",
+      "fuentes_rag": [
+        {
+          "archivo": "Reemplazo total de cadera Guía para el paciente .pdf",
+          "ruta": "total joint replacement\\Reemplazo total de cadera Guía para el paciente .pdf"
+        },
+        {
+          "archivo": "PLAN CASERO REEMPLAZO TOTAL DE RODILLA.pdf",
+          "ruta": "total joint replacement\\PLAN CASERO REEMPLAZO TOTAL DE RODILLA.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.524538500001654,
+      "latencia_llm": 0.5092551999841817,
+      "latencia_tts": 22.254427400010172,
+      "latencia_total": 24.3120656000101,
+      "tokens": {
+        "input": 1374,
+        "output": 113
+      },
+      "timestamp": "2026-08-12T20:49:06.051676"
+    }
+  ]
+}

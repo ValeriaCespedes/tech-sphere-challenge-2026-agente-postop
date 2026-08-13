@@ -68,6 +68,18 @@ Si la información del paciente es AMBIGUA o INSUFICIENTE para decidir con confi
 "verde" por defecto — responde con "requiere_mas_info": true y formula una pregunta de seguimiento \
 específica antes de clasificar.
 
+IMPORTANTE: Distingue entre dos tipos de mensajes del paciente:
+
+1. REPORTE DE SÍNTOMAS ("me duele", "tengo fiebre", "la herida está roja") — aquí sí \
+aplica el triaje completo, y si la información es ambigua o insuficiente para evaluar \
+la gravedad, pide más información.
+
+2. PREGUNTA INFORMATIVA sobre cuidados ("¿puedo bañarme?", "¿cuándo puedo caminar?", \
+"¿qué puedo comer?") — estas NO son reportes de síntomas. Clasifícalas como "verde" con \
+requiere_mas_info: false, para que el sistema pueda responder la consulta con la \
+información clínica disponible. Solo pide más información si la pregunta es genuinamente \
+incomprensible.
+
 Responde ÚNICAMENTE con un objeto JSON, sin texto adicional, con este formato exacto:
 {
   "clasificacion": "rojo" | "amarillo" | "verde",
@@ -86,15 +98,25 @@ class DecisionResult:
     fuente_decision: str  # "llm", "reglas", o "llm+reglas" si coincidieron/escaló
 
 
-def clasificar_turno(texto_paciente: str) -> DecisionResult:
+def clasificar_turno(texto_paciente: str, historial: list[dict] | None = None) -> DecisionResult:
     # 1. Reglas duras (rápido, determinístico, red de seguridad)
     clasificacion_reglas = detectar_reglas(texto_paciente)
+
+    # Contexto conversacional: permite entender respuestas breves ("sí", "no",
+    # "tres días") que dependen de lo que el agente preguntó en turnos previos.
+    bloque_historial = ""
+    if historial:
+        lineas = []
+        for turno in historial:
+            etiqueta = "Paciente" if turno["rol"] == "paciente" else "Agente"
+            lineas.append(f"{etiqueta}: {turno['texto']}")
+        bloque_historial = "\n\nHISTORIAL PREVIO DE LA CONVERSACIÓN:\n" + "\n".join(lineas)
 
     # 2. LLM con salida estructurada
     resultado_llm = chat_completion(
         messages=[
             {"role": "system", "content": SYSTEM_INSTRUCTION_DECISION},
-            {"role": "user", "content": f"Reporte del paciente: {texto_paciente}"},
+            {"role": "user", "content": f"Reporte del paciente: {texto_paciente}{bloque_historial}"},
         ],
         response_format={"type": "json_object"},
         temperature=0.1,  # baja temperatura: queremos consistencia, no creatividad, en triaje

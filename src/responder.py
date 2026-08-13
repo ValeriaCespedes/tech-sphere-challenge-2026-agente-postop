@@ -11,8 +11,8 @@ fragmentos parciales. Nunca inventes una dosis, medicamento, procedimiento, ni t
 sobre un síntoma de alarma sin respaldo textual directo del contexto."""
 
 
-def responder_con_contexto(pregunta_paciente: str) -> dict:
-    fuentes = recuperar(pregunta_paciente)
+def responder_con_contexto(pregunta_paciente: str, historial: list[dict] | None = None, escenario: str | None = None) -> dict:
+    fuentes = recuperar(pregunta_paciente, escenario=escenario)
 
     if not fuentes:
         return {
@@ -30,17 +30,30 @@ def responder_con_contexto(pregunta_paciente: str) -> dict:
         f"[Fuente: {f['archivo']}]\n{f['texto']}" for f in fuentes
     )
 
+    # Construye el historial conversacional como turnos previos, si existe
+    bloque_historial = ""
+    if historial:
+        lineas = []
+        for turno in historial:
+            etiqueta = "Paciente" if turno["rol"] == "paciente" else "Agente"
+            lineas.append(f"{etiqueta}: {turno['texto']}")
+        bloque_historial = "HISTORIAL DE LA CONVERSACIÓN HASTA AHORA:\n" + "\n".join(lineas) + "\n\n"
+
+    prompt = f"""{bloque_historial}CONTEXTO CLÍNICO:
+{contexto}
+
+PREGUNTA/RESPUESTA ACTUAL DEL PACIENTE:
+{pregunta_paciente}
+
+Ten en cuenta el historial de la conversación para entender a qué se refiere el paciente \
+si su mensaje actual es breve o depende de algo que ya se dijo (por ejemplo, "sí", "no", \
+"un poco"). Responde en español, en tono cálido y profesional, en máximo 3 frases (esto \
+es una llamada de voz, no un chat). Basa tu respuesta únicamente en el CONTEXTO CLÍNICO."""
+
     resultado = chat_completion(
         messages=[
             {"role": "system", "content": SYSTEM_INSTRUCTION},
-            {"role": "user", "content": f"""CONTEXTO:
-{contexto}
-
-PREGUNTA DEL PACIENTE:
-{pregunta_paciente}
-
-Responde en español, en tono cálido y profesional, en máximo 3 frases (esto es una \
-llamada de voz, no un chat). Basa tu respuesta únicamente en el CONTEXTO."""},
+            {"role": "user", "content": prompt},
         ]
     )
 
@@ -55,7 +68,6 @@ llamada de voz, no un chat). Basa tu respuesta únicamente en el CONTEXTO."""},
 
 if __name__ == "__main__":
     r = responder_con_contexto("¿Es normal tener dolor tres días después de una apendicectomía?")
-    #r = responder_con_contexto("¿En qué consiste un circuito RC de primer orden?")
     print(r["respuesta"])
     print("Fuentes:", r["fuentes"])
     print(f"Latencia: {r['latencia']:.2f}s | Tokens: {r['tokens']}")

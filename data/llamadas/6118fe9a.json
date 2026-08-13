@@ -1,0 +1,27 @@
+{
+  "llamada_id": "6118fe9a",
+  "inicio": "2026-08-11T19:17:36.476786",
+  "nombre_paciente": "Jean León Sepúlveda",
+  "procedimiento": "Colecistectomía",
+  "turnos": [
+    {
+      "transcripcion_paciente": " ¿Puedo bañarme normalmente o debo evitar mojar la herida?",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "Duda sobre el cuidado de la herida postoperatoria",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿Cuánto tiempo ha pasado desde la operación y qué tipo de herida tiene?",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 1.5975249000184704,
+      "latencia_llm": 0.6262062000168953,
+      "latencia_tts": 3.3816840999934357,
+      "latencia_total": 6.941980800009333,
+      "tokens": {
+        "input": 1335,
+        "output": 108
+      },
+      "timestamp": "2026-08-11T19:17:53.630116"
+    }
+  ]
+}

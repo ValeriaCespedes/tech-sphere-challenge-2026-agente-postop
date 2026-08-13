@@ -51,3 +51,18 @@ def _guardar(llamada_id: str, registro: dict) -> None:
 
 def _cargar(llamada_id: str) -> dict:
     return json.loads(_ruta(llamada_id).read_text(encoding="utf-8"))
+
+def obtener_historial_conversacional(llamada_id: str, max_turnos: int = 6) -> list[dict]:
+    """
+    Devuelve los últimos turnos de la llamada en formato de mensajes
+    (paciente/agente alternados), listos para inyectar como contexto
+    conversacional. Limita a max_turnos para no inflar el prompt.
+    """
+    registro = obtener_llamada(llamada_id)
+    turnos = registro.get("turnos", [])[-max_turnos:]
+
+    historial = []
+    for t in turnos:
+        historial.append({"rol": "paciente", "texto": t.get("transcripcion_paciente", "")})
+        historial.append({"rol": "agente", "texto": t.get("respuesta_agente", "")})
+    return historial

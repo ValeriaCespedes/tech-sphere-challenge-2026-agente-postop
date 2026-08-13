@@ -1,0 +1,140 @@
+{
+  "llamada_id": "7a10cbcb",
+  "inicio": "2026-08-12T20:32:13.608638",
+  "nombre_paciente": "Mauricio Juan González Sánchez",
+  "procedimiento": "Apendicectomía",
+  "turnos": [
+    {
+      "transcripcion_paciente": " ¿Qué alimentos debo evitar mientras me recupero?",
+      "clasificacion": "verde",
+      "razon_clasificacion": "Pregunta informativa sobre cuidados",
+      "fuente_decision": "llm",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Durante su recuperación, es importante evitar el consumo de verduras crudas como lechuga y repollo, frutas cítricas o ácidas, carnes enlatadas, salsamentaria, vísceras, alimentos fritos o con mucha grasa, y bebidas alcohólicas o gaseosas. También debe limitar el consumo de lácteos y preferir opciones deslactosadas al inicio. Es fundamental seguir las recomendaciones dietéticas específicas para su caso y consultar con su médico si tiene alguna duda.",
+      "fuentes_rag": [
+        {
+          "archivo": "diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf",
+          "ruta": "Appendicitis\\diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.6656931999896187,
+      "latencia_llm": 0.6815442999941297,
+      "latencia_tts": 19.02914920001058,
+      "latencia_total": 21.90238159999717,
+      "tokens": {
+        "input": 1461,
+        "output": 120
+      },
+      "timestamp": "2026-08-12T20:33:01.746069"
+    },
+    {
+      "transcripcion_paciente": " Llevo dos días con fiebre baja como 37.8",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "fiebre baja",
+      "fuente_decision": "llm+reglas",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Entiendo que estás experimentando fiebre baja, sin embargo, no tengo información específica en el contexto clínico proporcionado sobre cómo manejar una fiebre de 37.8 grados en tu situación particular. Te recomiendo consultar con tu médico para obtener orientación personalizada, ya que ellos pueden evaluar tu caso y proporcionar las recomendaciones adecuadas. Voy a dejar registrado su reporte para que el equipo médico le dé seguimiento.",
+      "fuentes_rag": [
+        {
+          "archivo": "Identificación de microorganismos intrabdominales asociados a colección intrabdominal postoperatoria en niños con apendicitis perforada.pdf",
+          "ruta": "Appendicitis\\Identificación de microorganismos intrabdominales asociados a colección intrabdominal postoperatoria en niños con apendicitis perforada.pdf"
+        },
+        {
+          "archivo": "diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf",
+          "ruta": "Appendicitis\\diagnóstico, tratamiento y seguimiento del paciente adulto con apendicitis aguda en el Hospital Universitario Nacional de Colombia.pdf"
+        },
+        {
+          "archivo": "FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf",
+          "ruta": "Appendicitis\\FACTORES ASOCIADOS A LA INCIDENCIA DE APENDICITIS AGUDA COMPLICADA EN LA E.S.E. HOSPITAL UNIVERSITARIO DEL CARIBE.pdf"
+        }
+      ],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.425923699978739,
+      "latencia_llm": 0.7135229000123218,
+      "latencia_tts": 18.02044319998822,
+      "latencia_total": 19.711393100005807,
+      "tokens": {
+        "input": 2033,
+        "output": 80
+      },
+      "timestamp": "2026-08-12T20:35:59.297809"
+    },
+    {
+      "transcripcion_paciente": " La fiebre ha aumentado a 39 y tengo dolor en el pecho.",
+      "clasificacion": "rojo",
+      "razon_clasificacion": "Fiebre alta de 39 y dolor en el pecho",
+      "fuente_decision": "llm+reglas",
+      "requiere_mas_info": false,
+      "respuesta_agente": "Lo que me cuenta requiere atención médica inmediata. Voy a escalar esto a nuestro equipo médico ahora mismo y alguien se comunicará con usted a la brevedad. Si los síntomas empeoran, acuda a urgencias de inmediato.",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.9606995000212919,
+      "latencia_llm": 0.6551051000133157,
+      "latencia_tts": 8.141309300001012,
+      "latencia_total": 10.410722100001294,
+      "tokens": {
+        "input": 1664,
+        "output": 108
+      },
+      "timestamp": "2026-08-12T20:36:58.060716"
+    },
+    {
+      "transcripcion_paciente": " Tengo la herida un poco enrojecida y me preocupa.",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "Herida enrojecida y preocupación del paciente",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿La enrojecimiento de la herida está acompañada de otros síntomas como dolor, inflamación, pus o fiebre?",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.4668455999926664,
+      "latencia_llm": 0.6783588999824133,
+      "latencia_tts": 4.1827981999958865,
+      "latencia_total": 5.987690600013593,
+      "tokens": {
+        "input": 1361,
+        "output": 107
+      },
+      "timestamp": "2026-08-12T20:38:18.689207"
+    },
+    {
+      "transcripcion_paciente": " No.",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "La herida enrojecida puede ser un signo de infección, pero se necesita más información para determinar la gravedad",
+      "fuente_decision": "llm",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿La enrojecimiento de la herida está acompañada de otros síntomas como dolor, inflamación, pus o fiebre?",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.37221810000482947,
+      "latencia_llm": 0.7996590999828186,
+      "latencia_tts": 4.382202000007965,
+      "latencia_total": 6.202834900002927,
+      "tokens": {
+        "input": 1490,
+        "output": 73
+      },
+      "timestamp": "2026-08-12T20:38:37.748300"
+    },
+    {
+      "transcripcion_paciente": " No, es solamente enrojecimiento. No hay ningún otro síntoma.",
+      "clasificacion": "amarillo",
+      "razon_clasificacion": "enrojecimiento de la herida sin otros síntomas",
+      "fuente_decision": "llm+reglas",
+      "requiere_mas_info": true,
+      "respuesta_agente": "¿La enrojecimiento ha empeorado con el tiempo o ha aparecido algún otro síntoma como dolor o inflamación alrededor de la herida?",
+      "fuentes_rag": [],
+      "sin_conocimiento": false,
+      "latencia_stt": 0.4420717000029981,
+      "latencia_llm": 0.4103236999944784,
+      "latencia_tts": 4.834958400024334,
+      "latencia_total": 6.227687400009017,
+      "tokens": {
+        "input": 1673,
+        "output": 67
+      },
+      "timestamp": "2026-08-12T20:38:59.458434"
+    }
+  ]
+}
