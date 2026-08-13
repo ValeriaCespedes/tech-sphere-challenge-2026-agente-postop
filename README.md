@@ -59,6 +59,10 @@ Agente de voz para seguimiento postoperatorio, construido con FastAPI, RAG sobre
 ChromaDB, y Groq (Llama 3.3 70B para razonamiento, Whisper Large V3 para
 transcripción) + Kokoro TTS para síntesis de voz en español.
 
+### Video de demo y argumentación
+
+📹 **Video** (Preguntas de cierre): [Ver en YouTube](https://youtu.be/rCe7qMSVX0s)
+
 ### Las dos superficies
 
 Tu solución debe exponer dos superficies. Pueden ser una sola aplicación o dos; el diseño
